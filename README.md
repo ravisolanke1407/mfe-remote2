@@ -1,10 +1,33 @@
-# Remote2 App
+# MFE Webpack Demo – Remote2
 
-This is Remote2 for the MFE Webpack demo.
+## Overview
+This is **Remote2**, a micro frontend exposed via Webpack Module Federation. It provides the `OrderLabel` component to the host app.
 
-## Setup
+## Author
+- **Ravindra Solanke** ([GitHub](https://github.com/ravisolanke1407))
 
-```
+## Live Demo
+- Remote2: [https://mfe-remote2-yourvercel.vercel.app](https://mfe-remote2-yourvercel.vercel.app)
+
+## Features
+- Exposes React components for host consumption
+- Shares React as singleton
+- Manifest-driven remote loading
+
+## Setup & Development
+```sh
 npm install
 npm run start:local
 ```
+App runs at [http://localhost:3002](http://localhost:3002)
+
+## Deployment
+- Push code to GitHub
+- Import repo to Vercel and deploy (output dir: `dist`)
+
+## Module Federation
+- Exposes `./OrderLabel` in `remoteEntry.js`
+- Shares React and ReactDOM as singleton
+
+## License
+MIT
